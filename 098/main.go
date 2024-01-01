@@ -35,11 +35,23 @@ func main() {
 		"Vietnamese Cinnamon (GF)",
 		"Wolverine Tracks (GF)"}
 
+	xs = append(xs, "The bomb")
 	fmt.Println(xs)
+
+	fmt.Println(len(xs), cap(xs))
 
 	for _, v := range xs {
 		fmt.Println(v)
 	}
-	fmt.Println(len(xs), cap(xs))
-	fmt.Printf("%T", xs)
+	fmt.Printf("%T\n", xs)
+
+	xi := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	fmt.Println(xi)
+
+	xi = append(xi[0:2], xi[3:5]...)
+	fmt.Println(xi)
+
+	xi2 := make([]int, 0, 100)
+	xi2 = append(xi2, 1, 2, 3, 4)
+	fmt.Println(xi2)
 }
