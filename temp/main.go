@@ -25,4 +25,17 @@ func main() {
 	c[0] = 4
 	fmt.Println("c", c)
 	fmt.Println("d", d)
+
+	xi := make([]int, 50)
+	fmt.Println(len(xi), cap(xi))
+	xi = append(xi, 1)
+	fmt.Println(len(xi), cap(xi))
+
+	m1 := make(map[string]int)
+
+	m1["Henry"] = 47
+	m1["john"] = 23
+
+	fmt.Println(m1)
+
 }
