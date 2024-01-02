@@ -14,6 +14,5 @@ func main() {
 		for _, v2 := range v {
 			fmt.Println(v2)
 		}
-
 	}
 }
