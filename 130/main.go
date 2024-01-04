@@ -24,11 +24,13 @@ func main() {
 	}
 
 	impreza := vehicle{
-		engine: engine{false},
-		make:   "Subaru",
-		model:  "Impreza",
-		doors:  4,
-		color:  "pearl white",
+		engine: engine{
+			electric: false,
+		},
+		make:  "Subaru",
+		model: "Impreza",
+		doors: 4,
+		color: "pearl white",
 	}
 
 	crosstrek := vehicle{
