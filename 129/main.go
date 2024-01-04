@@ -34,8 +34,8 @@ func main() {
 	for _, v := range people {
 		v.favorites()
 	}
-
 }
+
 func (p person) favorites() {
 	fmt.Printf("%s %s's favorite flavors are:\n", p.firstName, p.lastName)
 	for i, v := range p.favFlavors {
