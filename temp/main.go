@@ -2,40 +2,59 @@ package main
 
 import "fmt"
 
+type dogYears int
+
 func main() {
-	a := []int{10, 12, 14, 16, 18}
-	b := a
-	fmt.Println("a", a)
-	fmt.Println("b", b)
-	fmt.Println("------------------")
-	// notice that a and b both change
-	a[0] = 4
-	fmt.Println("a", a)
-	fmt.Println("b", b)
 
-	fmt.Println("------------------")
-	c := []int{10, 12, 14, 16, 18}
-	d := make([]int, 5, 100)
-	copy(d, c)
-	fmt.Println("c", c)
-	fmt.Println("d", d)
+	var age dogYears = 4
+	fluffy := 4
+	age.dogAge(fluffy)
+	{
+		type person struct {
+			first string
+			last  string
+			age   int
+		}
 
-	fmt.Println("------------------")
-	// notice that only slice c changes
-	c[0] = 4
-	fmt.Println("c", c)
-	fmt.Println("d", d)
+		type secretAgent struct {
+			person
+			ltk   bool
+			first string
+		}
 
-	xi := make([]int, 50)
-	fmt.Println(len(xi), cap(xi))
-	xi = append(xi, 1)
-	fmt.Println(len(xi), cap(xi))
+		sa1 := secretAgent{
+			person: person{
+				first: "James",
+				last:  "Bond",
+				age:   32,
+			},
+			ltk:   true,
+			first: "Ethan",
+		}
 
-	m1 := make(map[string]int)
+		p1 := person{
+			first: "Jenny",
+			last:  "Moneypenny",
+			age:   22,
+		}
 
-	m1["Henry"] = 47
-	m1["john"] = 23
+		p3 := struct {
+			first string
+			last  string
+			age   int
+		}{
+			first: "David",
+			last:  "Williamson",
+			age:   31,
+		}
 
-	fmt.Println(m1)
+		fmt.Println(sa1)
+		fmt.Println(p1)
+		fmt.Println(p3)
+		fmt.Println(sa1.first, sa1.first, sa1.person.first)
+	}
+}
 
+func (d dogYears) dogAge(i int) {
+	fmt.Println(int(d) * i)
 }
