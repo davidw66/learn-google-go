@@ -97,22 +97,16 @@ func main() {
 		v = xs[i]
 		xs[i] = strings.Replace(v, ".", "", -1)
 	}
-	fmt.Println(xs)
-	c := map[string]int{}
-	// c["bob"] = 21
-	// fmt.Println(c)
 
+	c := map[string]int{}
 	t := map[string]int{}
-	// var a int
+
 	for _, v := range xs {
 		c[v]++
 		t[v] = c[v]
 	}
 
-	// fmt.Printf("%v", t)
-
 	for i := 1; i < len(c); i++ {
-
 		for k, v := range c {
 			if v == i {
 				fmt.Printf("%v\t%v\n", k, v)
