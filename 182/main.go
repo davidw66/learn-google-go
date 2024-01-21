@@ -11,5 +11,4 @@ func addT[T int | float64](a, b T) T {
 func main() {
 	fmt.Println(addT(2, 3))
 	fmt.Println(addT(4.7, 5.9))
-
 }
