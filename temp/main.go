@@ -1,25 +1,30 @@
 package main
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+	"os"
+)
+
+type ColorGroup struct {
+	ID     int
+	Name   string
+	Colors []string
+}
 
 func main() {
-	fmt.Println(factorial(4))
-	fmt.Println(loopFactorial(4))
-
-}
-
-func factorial(i int) int {
-	if i == 0 {
-		return 1
+	group := ColorGroup{
+		ID:     1,
+		Name:   "Reds",
+		Colors: []string{"Crimson", "Red", "Ruby", "Maroon"},
 	}
-	return i * factorial(i-1)
-}
 
-func loopFactorial(i int) int {
-	n := 1
-	for i > 0 {
-		n *= i
-		i--
+	b, err := json.Marshal(group)
+	if err != nil {
+		fmt.Println("error", err)
 	}
-	return n
+
+	os.Stdout.Write(b)
+	fmt.Println("\n--------")
+	fmt.Println(string(b))
 }
