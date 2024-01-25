@@ -7,4 +7,7 @@ require (
 	golang.org/x/exp v0.0.0-20240119083558-1b970713d09a
 )
 
-require github.com/GoesToEleven/dog v0.0.0-20230428023317-90bef1c76cb9 // indirect
+require (
+	github.com/GoesToEleven/dog v0.0.0-20230428023317-90bef1c76cb9 // indirect
+	golang.org/x/crypto v0.18.0 // indirect
+)
