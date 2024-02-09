@@ -1,0 +1,7 @@
+2024/02/09 09:50:14 err happened open no-file.txt: no such file or directory
+2024/02/09 10:02:26 err happened open no-file.txt: no such file or directory
+2024/02/09 10:02:43 err happened open no-file.txt: no such file or directory
+2024/02/09 10:09:40 err happened open no-file.txt: no such file or directory
+2024/02/09 10:14:40 err happened open no-file.txt: no such file or directory
+2024/02/09 10:15:21 err happened open no-file.txt: no such file or directory
+2024/02/09 10:16:30 err happened open no-file.txt: no such file or directory
