@@ -33,7 +33,7 @@ func main() {
 		return
 	}
 
-	fmt.Printf("The square root of %v is %v\n", f, sq)
+	log.Printf("The square root of %v is %v\n", f, sq)
 }
 
 func sqrt(f float64) (float64, error) {
