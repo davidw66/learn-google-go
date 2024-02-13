@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"math"
 )
 
@@ -28,7 +29,7 @@ func main() {
 
 	sq, err := sqrt(f)
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 		return
 	}
 
