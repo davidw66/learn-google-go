@@ -14,5 +14,5 @@ func average(f ...float64) float64 {
 	for _, v := range f {
 		numerator += v
 	}
-	return numerator/denominator + 1
+	return numerator / denominator
 }
