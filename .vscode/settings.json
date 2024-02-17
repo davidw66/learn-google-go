@@ -8,5 +8,11 @@
         "neighbourhood",
         "Norgate",
         "Velasco"
-    ]
+    ],
+    "go.alternateTools": {},
+    "go.delveConfig": {},
+    "go.testEnvVars": {},
+    "go.playground": {
+        "run": false
+    }
 }
