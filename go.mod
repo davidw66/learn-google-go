@@ -1,6 +1,6 @@
 module hello
 
-go 1.21
+go 1.22
 
 require (
 	github.com/GoesToEleven/puppy v1.3.0
