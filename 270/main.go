@@ -22,14 +22,14 @@ func incrementor() chan int {
 }
 
 func puller(c chan int) chan int {
-	factorial := make(chan int)
+	sumC := make(chan int)
 	go func() {
 		var sum int
 		for n := range c {
 			sum += n
 		}
-		factorial <- sum
-		close(factorial)
+		sumC <- sum
+		close(sumC)
 	}()
-	return factorial
+	return sumC
 }
