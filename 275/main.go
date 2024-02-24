@@ -3,10 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	c := gen(4, 5, 6)
-	out := sq(c)
-
-	for numSqr := range out {
+	for numSqr := range sq(gen(4, 5, 6)) {
 		fmt.Println(numSqr)
 	}
 }
