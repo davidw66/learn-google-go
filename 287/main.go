@@ -21,7 +21,7 @@ func incrementor(n int) chan string {
 	c := make(chan string)
 	done := make(chan bool)
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		go func(i int) {
 			for k := range 20 {
 				c <- fmt.Sprint("Process:  "+strconv.Itoa(i)+" printing: ", k)
